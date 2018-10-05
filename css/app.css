@@ -24,8 +24,9 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: : center;
     flex-direction: column;
+    text-align: center;
 }
 
 h1 {
@@ -37,73 +38,114 @@ h1 {
  * Styles for the deck of cards
  */
 
-.deck {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 3em;
-}
+ table {
+   width: 560px;
+   height: 50px;
+   border: none;
+   margin: auto;
+ }
 
-.deck .card {
-    height: 125px;
-    width: 125px;
-    background: #2e3d49;
-    font-size: 0;
-    color: #ffffff;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-}
+ td {
+   width: 140px;
+   text-align: center;
+ }
 
-.deck .card.open {
-    transform: rotateY(0);
-    background: #02b3e4;
-    cursor: default;
-}
+ .score-panel .star li  {
+   display: inline-block;
+ }
 
-.deck .card.show {
-    font-size: 33px;
-}
 
-.deck .card.match {
-    cursor: default;
-    background: #02ccba;
-    font-size: 33px;
-}
+ .card {
+   width: 560px;
+   min-height: 580px;
+   display: flex;
+   flex-wrap: wrap;
+   background:#33DBFF ;
+   text-align: center;
+   justify-content: center;
+   align-content: center;
+   margin: auto;
+   border-radius: 60px;
+   padding: 10px;
+ }
 
-/*
- * Styles for the Score Panel
- */
+ .card .tile {
+   height: 100px;
+   width: 100px;
+   display: flex;
+   list-style: none;
+   text-align: center;
+   justify-content: center;
+   align-content: center;
+   font-size: 0;
+   border-radius: 35px;
+   background: #000;
+   text-align: center;
+   padding: 35px;
+   margin: 10px;
+ }
 
-.score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
-}
+ .card .open {
+   font-size: 30px;
+   background: #fff;
+   text-align: center;
+   padding: 35px;
+   margin: 10px;
+ }
 
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
+ .card .match {
+   font-size: 30px;
+   background:#75FF33 ;
+   text-align: center;
+   padding: 35px;
+   margin: 10px;
+ }
 
-.score-panel .stars li {
-    list-style: none;
-    display: inline-block;
-}
+ .modal {
+   display: none;
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   width: 450px;
+   height: 225px;
+   background:#DBFF33;
+ }
 
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
-}
+ .modal-content {
+   margin-left: auto;
+   margin-right: auto;
+   display: table;
+   margin-top: 12px;
+   width: 300px;
+   height: 180px;
+   position: relative;
+ }
+
+ .close {
+   color: #000;
+   float: right;
+   font-size: 40px;
+   font-weight: bold;
+   margin-right: 10px;
+ }
+
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ .replay {
+   background-color: #FFBD33;
+   color: white;
+   padding: 8px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   border-radius: 32px;
+ }
