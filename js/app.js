@@ -91,9 +91,9 @@ function updateCurrentState() {
     clearInterval(currentState.timerInterval);
     modal.style.display="block";
     document.getElementById('message').textContent = "Congragulations!";
-    document.getElementById('move-count').textContent = "Moves made: " + (currentState.numClicks / 2);
-    document.getElementById('star-rating').textContent = "Stars earned: " + currentState.stars;
-    document.getElementById('time').textContent = "Time taken: "+minutesLabel.innerHTML+":"+secondsLabel.innerHTML;
+    document.getElementById('move-count').textContent = "No. of Moves: " + (currentState.numClicks / 2);
+    document.getElementById('star-rating').textContent = "Stars: " + currentState.stars;
+    document.getElementById('time').textContent = "Time: "+minutesLabel.innerHTML+":"+secondsLabel.innerHTML;
   }
 }
 
