@@ -90,7 +90,7 @@ function updateCurrentState() {
   if(isGameOver()) {
     clearInterval(currentState.timerInterval);
     modal.style.display="block";
-    document.getElementById('message').textContent = "Congragulations!";
+    document.getElementById('message').textContent = "Congratulations!";
     document.getElementById('move-count').textContent = "No. of Moves: " + (currentState.numClicks / 2);
     document.getElementById('star-rating').textContent = "Stars: " + currentState.stars;
     document.getElementById('time').textContent = "Time: "+minutesLabel.innerHTML+":"+secondsLabel.innerHTML;
